@@ -9,7 +9,9 @@ using System.Reflection;
 using LerniloApo.Config;
 using Newtonsoft.Json;
 
-Console.WriteLine("LerniloApo");
+
+Console.Title = "Lernilo Apo";
+ConsoleHelper.DisplayMenu();
 
 //FileManager.ReadFiles();
 //FileManager.WriteFiles();

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "WpfApp\WpfApp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LerniloApo.DAL", "LerniloApo.DAL\LerniloApo.DAL.csproj", "{068529E4-E36E-4F26-9BD2-156E83E5FE60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LerniloApo.Logic", "LerniloApo.Logic\LerniloApo.Logic.csproj", "{AE65CAE5-9EB3-41AB-85C1-AC821A83E17B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{068529E4-E36E-4F26-9BD2-156E83E5FE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{068529E4-E36E-4F26-9BD2-156E83E5FE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{068529E4-E36E-4F26-9BD2-156E83E5FE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE65CAE5-9EB3-41AB-85C1-AC821A83E17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE65CAE5-9EB3-41AB-85C1-AC821A83E17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE65CAE5-9EB3-41AB-85C1-AC821A83E17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE65CAE5-9EB3-41AB-85C1-AC821A83E17B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
