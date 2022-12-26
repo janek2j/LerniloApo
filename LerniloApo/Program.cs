@@ -11,7 +11,8 @@ using Newtonsoft.Json;
 
 
 Console.Title = "Lernilo Apo";
-ConsoleHelper.DisplayMenu();
+//ConsoleHelper.DisplayMenu();
+ConsoleHelper.StartMenu();
 
 //FileManager.ReadFiles();
 //FileManager.WriteFiles();
