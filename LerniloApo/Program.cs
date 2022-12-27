@@ -9,7 +9,6 @@ using System.Reflection;
 using LerniloApo.Config;
 using Newtonsoft.Json;
 
-
 Console.Title = "Lernilo Apo";
 //ConsoleHelper.DisplayMenu();
 ConsoleHelper.StartMenu();
@@ -60,8 +59,6 @@ Deck deck_2 = JsonConvert.DeserializeObject<Deck>(deckSerialized_2);
 
 Console.WriteLine($"Deck: {deck_2.Name}, no. of cards in deck: {deck_2.Cards.Count}");
 
-
-
 if (false)
 {
     string create_card =
@@ -109,25 +106,6 @@ if (false)
     //    command.ExecuteNonQuery();
     //    connection.Close();
     //}
-
-}
-
-// show menu
-void ShowMenu()
-{
-    Console.WriteLine(@"
-1. Show list of decks.
-");
-
-    string input = Console.ReadLine();
-
-    switch(input)
-    {
-        case "1":
-            Console.WriteLine("?????");
-            break;
-
-    }
 }
 
 void PrintDeckList()

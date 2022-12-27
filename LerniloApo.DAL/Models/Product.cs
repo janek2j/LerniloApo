@@ -10,7 +10,6 @@ namespace LerniloApo
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; } = null!;
-
         public double Price { get; set; }
     }
 }
