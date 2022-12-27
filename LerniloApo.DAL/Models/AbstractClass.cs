@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LerniloApo.DAL.Models
 {
-    internal class AbstractClass
+    public class AbstractClass
     {
+        public int Id { get; set; }
     }
 }
