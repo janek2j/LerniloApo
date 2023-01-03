@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="JSON\" />
+    <ProjectReference Include="..\LerniloApo.DAL\LerniloApo.DAL.csproj" />
+    <ProjectReference Include="..\LerniloApo.Logic\LerniloApo.Logic.csproj" />
   </ItemGroup>
 
 </Project>
