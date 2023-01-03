@@ -1,34 +1,30 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LerniloApo
+namespace LerniloApo.ConsoleUI;
+
+public class SqliteDbContext : DbContext
 {
+    public DbSet<Deck> Decks { get; set; }
 
-    public class SqliteDbContext : DbContext
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        public DbSet<Product> Products { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // TODO 
+        // C:\Users\janek\source\repos\LerniloApo\LerniloApo.DAL\Data
+        optionsBuilder.UseSqlite("FileName=..\\..\\..\\..\\LerniloApo.DAL\\Data\\lernilo.db", option =>
         {
-            optionsBuilder.UseSqlite("FileName=lernilo.db", option =>
-            {
-                option.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
-            });
-            base.OnConfiguring(optionsBuilder);
-        }
+            option.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
+        });
+        base.OnConfiguring(optionsBuilder);
+    }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Deck>().ToTable("Decks", "mainschema");
+        modelBuilder.Entity<Deck>(entity =>
         {
-            modelBuilder.Entity<Product>().ToTable("Products", "test");
-            modelBuilder.Entity<Product>(entity =>
-            {
-                entity.HasKey(k => k.ProductID);
-                entity.HasIndex(i => i.ProductName).IsUnique();
-            });
-        }
+            entity.HasKey(k => k.Id);
+            entity.HasIndex(i => i.Name).IsUnique();
+        });
     }
 }
